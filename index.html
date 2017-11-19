@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>test</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-multiselect.css" rel="stylesheet">
+</head>
+
+<body>
+    <div id="content">
+        <datatable-text-filter placeholder="Filter by name" :datatable="dataTable" column-index="0"></datatable-text-filter>
+
+        <datatable-select-filter placeholder="Filter by group" :datatable="dataTable" column-index="1">
+            <option value="PRO">PRO</option>
+            <option value="NOOB">NOOB</option>
+        </datatable-select-filter>
+
+        <datatable v-model="dataTable" :row-click="dataTableRowClick" :options="dataTableOptions">
+            <table class="table display table-condensed table-hover">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>KennyS</td>
+                        <td>PRO</td>
+                    </tr>
+                    <tr>
+                        <td>Olofmeister</td>
+                        <td>PRO</td>
+                    </tr>
+                    <tr>
+                        <td>ScreaM</td>
+                        <td>NOOB</td>
+                    </tr>
+                    <tr>
+                        <td>CadiaN</td>
+                        <td>NOOB</td>
+                    </tr>
+                </tbody>
+            </table>
+        </datatable>
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap.min.js"></script>
+    <script src="js/bootstrap-multiselect.js"></script>
+    <script src="js/vue.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
